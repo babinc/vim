@@ -39,3 +39,7 @@ fh Telescope help_tags
 '<leader>f', format
 
 ctrl-w = delete buffer
+
+ctrl-n = tree view
+a while inside tree view to create file
+? while inside tree view for help
