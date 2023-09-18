@@ -1,0 +1,41 @@
+==TAB MAPPINGS==
+<leader>tt :tabnew
+<leader>te :tabedit
+<leader>tc :tabclose
+<leader>to :tabonly
+<leader>tn :tabnext
+<leader>tp :tabprevious
+<leader>tf :tabfirst
+<leader>tl :tablast
+<leader>tm :tabmove
+
+==TELESCOPE==
+ff Telescope find_files
+fg Telescope live_grep
+fb Telescope buffers
+fh Telescope help_tags
+
+
+==COMPLETION==
+<C-b> = cmp.mapping.scroll_docs(-4),
+<C-f> = cmp.mapping.scroll_docs(4),
+<C-o> = cmp.mapping.complete(),
+<C-e> = cmp.mapping.abort(),
+<CR> = cmp.mapping.confirm({ select = true }),
+
+==LSP==
+'gD', declaration
+'gd', definition
+'gr', lsp_references
+'K', documentation
+'gi', implementation, opts)
+'<leader>wa', add_workspace_folder
+'<leader>wr', remove_workspace_folder
+'<leader>wl', list workspace folders
+'<leader>D', type_definition
+'<leader>rn', rename
+'<leader>ca', code_action
+'gr', references
+'<leader>f', format
+
+ctrl-w = delete buffer
