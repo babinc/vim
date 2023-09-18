@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     tag = '0.1.3',
   }
+  use 'lewis6991/gitsigns.nvim'
 
   -- completoin
   use 'hrsh7th/nvim-cmp'
