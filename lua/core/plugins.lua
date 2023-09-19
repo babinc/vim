@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
     tag = '0.1.3',
   }
   use 'lewis6991/gitsigns.nvim'
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-commentary'
 
   -- completoin
   use 'hrsh7th/nvim-cmp'

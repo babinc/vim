@@ -13,7 +13,7 @@ au CursorHold * checktime
 
 " change leader key
 " let mapleader = "a"
-let mapleader=","
+let mapleader = " "
 
 "syntax enable                     " Turn on syntax highlighting.
 "filetype plugin indent on         " Turn on file type detection.
@@ -109,63 +109,6 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
-" call plug#begin('~/.config/nvim/plugged')
-
-" Plug 'mileszs/ack.vim'
-
-" Plug 'https://github.com/pangloss/vim-javascript.git'
-
-""NOT USING
-" Plug 'tpope/vim-fugitive'
-" Plug 'git://github.com/tpope/vim-speeddating.git'
-" Plug 'https://github.com/tpope/vim-git.git'
-" Plug 'mxw/vim-jsx'
-" Plug 'https://github.com/leshill/vim-json.git'
-" Plug 'https://github.com/danro/rename.vim.git'
-"RUST
-" Plug 'roxma/nvim-completion-manager'
-" Plug 'rust-lang/rust.vim'
-" Plug 'racer-rust/vim-racer'
-" Plug 'roxma/nvim-cm-racer'
-"Plug 'OmniSharp/omnisharp-vim'
-"Plug 'neovim/nvim-lspconfig' "native LSP support
-"Plug 'hrsh7th/nvim-cmp' "autocompletion framework
-"Plug 'hrsh7th/cmp-nvim-lsp' "LSP autocompletion provider
-" Plug 'puremourning/vimspector'
-
-"USING
-" Plug 'git://github.com/tpope/vim-surround.git'
-
-" Plug 'git://github.com/tpope/vim-commentary.git'
-
-" Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-
-" Plug 'https://github.com/elzr/vim-json.git'
-
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
-
-" Plug 'https://github.com/vim-scripts/vim-auto-save'
-
-" Plug 'christoomey/vim-tmux-navigator'
-
-" Plug 'https://github.com/shime/vim-livedown.git'
-
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
-
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Plug 'williamboman/mason.nvim'
-" Plug 'williamboman/mason-lspconfig.nvim'
-" Plug 'neovim/nvim-lspconfig'
-
-" Initialize plugin system
-" call plug#end()
-
 nmap <leader>r :! cargo run<CR>
 
 " neomake
@@ -183,21 +126,11 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 set autochdir
 
-"NERD TREE
-" Give a shortcut key to NERD Tree
-" nnoremap <F7> :NERDTreeToggle<CR>
-
-" augroup nerdtree_open
-"     autocmd!
-"     autocmd VimEnter * NERDTree | wincmd p
-" augroup END
-
-
 "Telescope
-" Find files using Telescope command-line sugar.
 nnoremap ff <cmd>Telescope find_files<cr>
 nnoremap fg <cmd>Telescope live_grep<cr>
 nnoremap fb <cmd>Telescope buffers<cr>
 nnoremap fh <cmd>Telescope help_tags<cr>
 
-noremap <C-w> :bd<Cr>
+"Delete Buffer
+nnoremap db :bd<Cr>
