@@ -38,7 +38,7 @@ fh Telescope help_tags
 'gr', references
 '<leader>f', format
 
-ctrl-w = delete buffer
+db = delete buffer
 
 ctrl-n = tree view
 a while inside tree view to create file
