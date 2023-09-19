@@ -131,6 +131,7 @@ nnoremap ff <cmd>Telescope find_files<cr>
 nnoremap fg <cmd>Telescope live_grep<cr>
 nnoremap fb <cmd>Telescope buffers<cr>
 nnoremap fh <cmd>Telescope help_tags<cr>
+nnoremap fj <cmd>Telescope jumplist<cr>
 
 "Delete Buffer
 nnoremap db :bd<Cr>

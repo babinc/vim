@@ -32,6 +32,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-commentary'
   -- use 'ThePrimeagen/harpoon'
+  
+  -- Not working, takes two tries at telescope
   use {
     'notjedi/nvim-rooter.lua',
     config = function() require('nvim-rooter').setup() end
@@ -45,7 +47,8 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- completoin
+
+  -- Completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'L3MON4D3/LuaSnip'
