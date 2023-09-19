@@ -124,8 +124,6 @@ set runtimepath^=~/.config/nvim/bundle/ctrlp.vim
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
-set autochdir
-
 "Telescope
 nnoremap ff <cmd>Telescope find_files<cr>
 nnoremap fg <cmd>Telescope live_grep<cr>

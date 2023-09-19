@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Colors
   use {
     "loctvl842/monokai-pro.nvim",
     config = function()
@@ -14,6 +15,7 @@ return require('packer').startup(function(use)
     end
   }
   use 'sainnhe/gruvbox-material'
+
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
@@ -32,12 +34,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-commentary'
   -- use 'ThePrimeagen/harpoon'
-  
-  -- Not working, takes two tries at telescope
-  use {
-    'notjedi/nvim-rooter.lua',
-    config = function() require('nvim-rooter').setup() end
-  }
+
+  use 'notjedi/nvim-rooter.lua'
 
   use {
     "startup-nvim/startup.nvim",
