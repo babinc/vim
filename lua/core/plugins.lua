@@ -47,6 +47,10 @@ return require('packer').startup(function(use)
     end
   }
 
+  use {
+    '0x00-ketsu/autosave.nvim',
+    tag = "v1.0",
+  }
 
   -- Completion
   use 'hrsh7th/nvim-cmp'
