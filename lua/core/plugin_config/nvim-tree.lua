@@ -8,6 +8,9 @@ require("nvim-tree").setup({
     enable = true,
     update_root = true
   },
+  view = {
+    width = 40
+  }
 })
 local api = require "nvim-tree.api"
 

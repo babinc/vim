@@ -28,7 +28,10 @@ set hidden                        " Handle multiple buffers better.
 set noshowmatch
 
 set noswapfile
-" set foldmethod=indent
+
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable                     " Disable folding at startup.
 
 " NoMatchParen " This doesnt work as it belongs to a plugin, which is only loaded _after_ all files are.
 " Trying disable MatchParen after loading all plugins
