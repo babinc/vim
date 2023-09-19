@@ -1,4 +1,4 @@
-require("core.plugin_config.monokai")
+require("core.plugin_config.color_theme")
 require("core.plugin_config.lualine")
 require("core.plugin_config.nvim-tree")
 require("core.plugin_config.telescope")

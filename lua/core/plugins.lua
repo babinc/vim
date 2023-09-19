@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
       require("monokai-pro").setup()
     end
   }
+  use 'sainnhe/gruvbox-material'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
@@ -30,6 +31,19 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-commentary'
+  -- use 'ThePrimeagen/harpoon'
+  use {
+    'notjedi/nvim-rooter.lua',
+    config = function() require('nvim-rooter').setup() end
+  }
+
+  use {
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = function()
+      require"startup".setup()
+    end
+  }
 
   -- completoin
   use 'hrsh7th/nvim-cmp'
