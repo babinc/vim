@@ -20,7 +20,8 @@ require'nvim-treesitter.configs'.setup {
     "svelte",
     "vim",
     "toml",
-    "rust"
+    "rust",
+    "norg"
   },
   sync_install = false,
   auto_install = true,

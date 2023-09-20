@@ -34,8 +34,13 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-commentary'
   -- use 'ThePrimeagen/harpoon'
-
   use 'notjedi/nvim-rooter.lua'
+  use 'sindrets/diffview.nvim'
+  use {
+    "nvim-neorg/neorg",
+    run = ":Neorg sync-parsers",
+    requires = "nvim-lua/plenary.nvim",
+  }
 
   use {
     "startup-nvim/startup.nvim",
@@ -44,10 +49,13 @@ return require('packer').startup(function(use)
       require"startup".setup()
     end
   }
-
   use {
     '0x00-ketsu/autosave.nvim',
     tag = "v1.0",
+  }
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
   }
 
   -- Completion

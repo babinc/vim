@@ -43,3 +43,6 @@ db = delete buffer
 ctrl-n = tree view
 a while inside tree view to create file
 ? while inside tree view for help
+
+DiffviewOpen
+DiffviewFileHistory

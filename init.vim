@@ -2,33 +2,18 @@
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
 luafile ~/AppData/Local/nvim/luarc.lua
-
 set termguicolors
-
 set nocompatible                  " Must come first because it changes other options.
 set mouse=a
-
 set autoread
 au CursorHold * checktime
-
-" change leader key
-" let mapleader = "a"
 let mapleader = " "
-
-"syntax enable                     " Turn on syntax highlighting.
-"filetype plugin indent on         " Turn on file type detection.
-
-" runtime macros/matchit.vim        " Load the matchit plugin.
-
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
-
 set backspace=indent,eol,start    " Intuitive backspacing.
 set hidden                        " Handle multiple buffers better.
 set noshowmatch
-
 set noswapfile
-
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable                     " Disable folding at startup.
@@ -48,23 +33,16 @@ augroup END
 
 set wildmenu                      " Enhanced command line completion.
 set wildmode=list:longest,full    " Complete files like a shell.
-
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
-
 set number                        " Show line numbers.
 set ruler                         " Show cursor position.
-
 set incsearch                     " Highlight matches as you type.
 set nohlsearch                    " Highlight matches.
-
 set nowrap                        " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
-
 set title                         " Set the terminal's title
-
 set visualbell                    " No beeping.
-
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
 
@@ -74,21 +52,15 @@ let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
 set updatetime=1000
 
 set undodir=~/.vim/.undo//
-
 set backupdir=~/.vim/.backup//
-
 set directory=~/.vim/.swp//
-
-" let g:airline_theme='tomorrow'
-
 set backupcopy=yes
 
-" UNCOMMENT TO USE
 set expandtab                    " Use spaces instead of tabs
 set shiftwidth=2                 " And again, related.
-set softtabstop=2                    " Global tab width.
+set softtabstop=2                " Global tab width.
 
-set laststatus=2                  " Show the status line all the time
+set laststatus=2                 " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
