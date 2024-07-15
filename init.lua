@@ -88,3 +88,7 @@ vim.api.nvim_set_keymap('n', '<leader>lb', '<cmd>lua build_project()<CR>', { nor
 
 -- Key binding to trigger debug
 vim.api.nvim_set_keymap('n', '<leader>ld', '<cmd>lua build_and_debug()<CR>', { noremap = true, silent = true })
+
+-- Keybinding for aligning equal signs in normal and visual mode
+vim.api.nvim_set_keymap('n', '<leader>ae', ':%EasyAlign =<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', '<leader>ae', ':EasyAlign =<CR>', { noremap = true, silent = true })

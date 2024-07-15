@@ -95,7 +95,7 @@ _G.build_and_debug = function()
 end
 
 if true then return {
-
+    'junegunn/vim-easy-align', -- Plugin for alignment
 } end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
