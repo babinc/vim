@@ -45,20 +45,47 @@ _G.get_dll_path = function()
     save_dll_path(dll_path)
     return dll_path
   end
-
 end
+
+function ParseLines(data)
+  if data then
+    local lines = vim.fn.split(table.concat(data, "\n"), "\n")
+    local qflist = {}
+    for _, line in ipairs(lines) do
+      if string.match(line, "error") then
+        local filename, lnum, col, errmsg = string.match(line, "([^%(]+)%((%d+),(%d+)%)%: error [^:]+: (.+)")
+        if filename and lnum and col and errmsg then
+          table.insert(qflist, {
+            filename = filename,
+            lnum = tonumber(lnum),
+            col = tonumber(col),
+            text = errmsg
+          })
+        else
+          print("Failed to parse:", line)
+        end
+      end
+    end
+    vim.fn.setqflist(qflist, 'r')
+    vim.fn.setqflist({}, 'a', { title = 'dotnet build' })
+  end
+end
+
 
 -- Function to build the C# project
 _G.build_project = function()
-  local build_command = 'dotnet build'
-  vim.fn.jobstart(build_command, {
-    cwd = vim.fn.getcwd(),
-    on_exit = function(_, code)
-      if code == 0 then
-        print('Build successful.')
-      else
-        print('Build failed.')
-      end
+  local cmd = 'dotnet build'
+  vim.fn.jobstart(cmd, {
+    stdout_buffered = true,
+    stderr_buffered = true,
+    on_stdout = function(_, data)
+      ParseLines(data)
+    end,
+    on_stderr = function(_, data)
+      ParseLines(data)
+    end,
+    on_exit = function()
+      vim.cmd('copen')
     end,
   })
 end
@@ -94,8 +121,26 @@ _G.build_and_debug = function()
   })
 end
 
+-- Ensure that this is executed after setting up the LSP
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cs",
+  callback = function()
+    vim.bo.expandtab = true
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+    vim.bo.softtabstop = 4
+  end,
+})
+
+
 if true then return {
-    'junegunn/vim-easy-align', -- Plugin for alignment
+  'junegunn/vim-easy-align', -- Plugin for alignment
+
+  -- Trouble plugin
+  {
+    'folke/trouble.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+  },
 } end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
