@@ -141,6 +141,26 @@ if true then return {
     'folke/trouble.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
   },
+  {
+    'MattesGroeger/vim-bookmarks',  -- Bookmark plugin
+    config = function()
+      vim.g.bookmark_sign = '⚑'  -- Change bookmark sign to a flag
+      vim.g.bookmark_save_per_working_dir = 1  -- Save bookmarks per working directory
+    end,
+  },
+  {
+    'tom-anders/telescope-vim-bookmarks.nvim',  -- Telescope integration for vim-bookmarks
+    requires = { 'nvim-telescope/telescope.nvim', 'MattesGroeger/vim-bookmarks' },
+    config = function()
+      require('telescope').load_extension('vim_bookmarks')
+    end,
+  },
+  -- {
+  --   "simrat39/rust-tools.nvim",
+  --   config = function()
+  --     require("rust-tools").setup({})
+  --   end,
+  -- },
 } end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
