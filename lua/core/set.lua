@@ -1,6 +1,6 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("github_dark_default")
 vim.opt.tabstop = 2        -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 2     -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab = true   -- Convert tabs to spaces

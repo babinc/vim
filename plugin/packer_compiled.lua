@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/carman/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/carman/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   harpoon = {
     loaded = true,
     path = "/home/carman/.local/share/nvim/site/pack/packer/start/harpoon",

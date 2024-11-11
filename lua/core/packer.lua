@@ -12,7 +12,9 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+  -- COLORS
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use ({ 'projekt0n/github-nvim-theme' })
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
