@@ -95,6 +95,16 @@ _G.packer_plugins = {
     path = "/home/carman/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["image.nvim"] = {
+    loaded = true,
+    path = "/home/carman/.local/share/nvim/site/pack/packer/start/image.nvim",
+    url = "https://github.com/3rd/image.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/carman/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mini.icons"] = {
     loaded = true,
     path = "/home/carman/.local/share/nvim/site/pack/packer/start/mini.icons",
