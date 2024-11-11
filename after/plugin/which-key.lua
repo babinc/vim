@@ -14,6 +14,8 @@ wk.keys = {
 wk.add({
   { "<leader>f", group = "Find" },
   { "<leader>t", group = "Terminal" },
+  { "<leader>l", group = "Language" },
+  { "<leader>g", group = "Git" },
   {
     -- Nested mappings are allowed and can be added in any order
     -- Most attributes can be inherited or overridden on any level

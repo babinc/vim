@@ -77,4 +77,9 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  use 'simrat39/inlay-hints.nvim'
+
+  use 'neovim/nvim-lspconfig'
+  use 'simrat39/rust-tools.nvim'
 end)

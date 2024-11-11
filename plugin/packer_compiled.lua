@@ -100,6 +100,11 @@ _G.packer_plugins = {
     path = "/home/carman/.local/share/nvim/site/pack/packer/start/image.nvim",
     url = "https://github.com/3rd/image.nvim"
   },
+  ["inlay-hints.nvim"] = {
+    loaded = true,
+    path = "/home/carman/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
+    url = "https://github.com/simrat39/inlay-hints.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/carman/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -177,6 +182,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/carman/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/carman/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
