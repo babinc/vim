@@ -88,4 +88,11 @@ return require('packer').startup(function(use)
   use {
     'christoomey/vim-tmux-navigator'
   }
+
+  use {
+    'echasnovski/mini.align',
+    config = function()
+      require('mini.align').setup()
+    end
+  }
 end)
