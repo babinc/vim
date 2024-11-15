@@ -31,6 +31,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
     vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+    vim.keymap.set("n", "<leader>ge", function()
+      require('telescope.builtin').diagnostics() -- All project diagnostics
+    end, { desc = "Show diagnostics for the entire project" })
 
     vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, { desc = "LSP code action" })
     vim.keymap.set("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "LSP Signature Help" })
@@ -40,6 +43,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "LSP Declaration" })
     vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "LSP Definition" })
     vim.keymap.set("n", "<leader>lK", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "LSP Hover" })
+
   end,
 })
 
