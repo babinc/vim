@@ -37,7 +37,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, { desc = "LSP code action" })
     vim.keymap.set("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "LSP Signature Help" })
-    vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "LSP References" })
+    vim.keymap.set("n", "<leader>lR", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "LSP References" })
+    vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "LSP References" })
     vim.keymap.set("n", "<leader>lo", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "LSP Type Definition" })
     vim.keymap.set("n", "<leader>li", "<cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "LSP Implementation" })
     vim.keymap.set("n", "<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "LSP Declaration" })
