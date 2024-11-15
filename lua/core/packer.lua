@@ -1,5 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -60,14 +58,15 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*'}
 
 	--LSP
-	use({'neovim/nvim-lspconfig'})
+	use {'neovim/nvim-lspconfig'}
 	use({'hrsh7th/nvim-cmp'})
 	use({'hrsh7th/cmp-nvim-lsp'})
 
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
 
   use {
     "windwp/nvim-autopairs",
-    event = "InsertEnter",
     config = function()
       require("nvim-autopairs").setup {}
     end
@@ -82,7 +81,6 @@ return require('packer').startup(function(use)
 
   use 'simrat39/inlay-hints.nvim'
 
-  use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
 
   use {

@@ -1,0 +1,11 @@
+{
+    "Print Debug": {
+        "prefix": "pd",
+        "body": "println!(\"{:?}\", $1);$0"
+    },
+    "Main Function": {
+        "prefix": "main",
+        "body": "fn main() {\n\t$0\n}"
+    }
+}
+
