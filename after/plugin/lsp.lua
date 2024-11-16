@@ -64,6 +64,9 @@ require'lspconfig'.rust_analyzer.setup{
 }
 require'lspconfig'.csharp_ls.setup{}
 require'lspconfig'.html.setup{}
+require'lspconfig'.volar.setup({
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+})
 require'lspconfig'.lua_ls.setup {
   on_init = function(client)
     if client.workspace_folders then
