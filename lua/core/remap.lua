@@ -28,3 +28,7 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true, desc = "
 vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true, desc = "Move to below split" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true, desc = "Move to above split" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true, desc = "Move to right split" })
+
+vim.keymap.set('x', '<leader>ga', function()
+    require('mini.align').align()  -- Align by prompt (default behavior)
+end, { noremap = true, silent = true, desc = "Align by Character" })

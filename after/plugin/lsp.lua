@@ -31,15 +31,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
     vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+    vim.keymap.set("n", "<leader>ge", function()
+      require('telescope.builtin').diagnostics() -- All project diagnostics
+    end, { desc = "Show diagnostics for the entire project" })
 
     vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, { desc = "LSP code action" })
     vim.keymap.set("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { desc = "LSP Signature Help" })
-    vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "LSP References" })
+    vim.keymap.set("n", "<leader>lR", "<cmd>lua vim.lsp.buf.references()<CR>", { desc = "LSP References" })
+    vim.keymap.set("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", { desc = "LSP References" })
     vim.keymap.set("n", "<leader>lo", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { desc = "LSP Type Definition" })
     vim.keymap.set("n", "<leader>li", "<cmd>lua vim.lsp.buf.implementation()<CR>", { desc = "LSP Implementation" })
     vim.keymap.set("n", "<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "LSP Declaration" })
     vim.keymap.set("n", "<leader>ld", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "LSP Definition" })
     vim.keymap.set("n", "<leader>lK", "<cmd>lua vim.lsp.buf.hover()<CR>", { desc = "LSP Hover" })
+
   end,
 })
 
@@ -59,6 +64,9 @@ require'lspconfig'.rust_analyzer.setup{
 }
 require'lspconfig'.csharp_ls.setup{}
 require'lspconfig'.html.setup{}
+require'lspconfig'.volar.setup({
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+})
 require'lspconfig'.lua_ls.setup {
   on_init = function(client)
     if client.workspace_folders then
