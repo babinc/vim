@@ -67,6 +67,10 @@ require'lspconfig'.html.setup{}
 require'lspconfig'.volar.setup({
   filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
 })
+require'lspconfig'.clangd.setup{}
+-- require('lspconfig').clangd.setup({
+--     cmd = { "clangd", "--compile-commands-dir=~/projects/hnp-simulator" },
+-- })
 require'lspconfig'.lua_ls.setup {
   on_init = function(client)
     if client.workspace_folders then
